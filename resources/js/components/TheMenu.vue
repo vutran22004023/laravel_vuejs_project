@@ -1,15 +1,15 @@
 <template>
     
     <a-menu
-      v-model:openKeys="openKeys"
-      v-model:selectedKeys="selectedKeys"
+      v-model:openKeys="selectedKeys"
+      v-model:selectedKeys="preOpenKeys"
       mode="inline" 
       class="metismenu list-unstyled"
     >
         <li class="menu-title">Menu</li>
-        <a-menu-item key="admin-users" class="waves-effect">
+        <a-menu-item key="admin-users" >
             <router-link :to="{name:'admin-users'}">
-                <i class="ri-dashboard-line"></i>
+                <i class="ri-dashboard-line" ></i>
                 <span>Tài Khoản</span>
             </router-link>
         </a-menu-item>

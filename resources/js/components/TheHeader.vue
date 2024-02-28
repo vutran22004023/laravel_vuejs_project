@@ -23,9 +23,9 @@
                             </a>
                         </div>
 
-                        <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
-                            <i class="ri-menu-2-line align-middle"></i>
-                        </button>
+                            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" @click="toggleSidebar" id="vertical-menu-btn">
+                                <i class="ri-menu-2-line align-middle" ></i>
+                            </button>
 
                         <!-- App Search-->
                         <form class="app-search d-none d-lg-block">
@@ -386,7 +386,7 @@
                         </div>
 
                         <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect" @click="toggoleSibar1">
                                 <i class="ri-settings-2-line"></i>
                             </button>
                         </div>
@@ -395,3 +395,36 @@
                 </div>
             </header>
 </template>
+
+
+<script>
+export default {
+  methods: {
+    toggleSidebar() {
+      const body = document.body;
+      // Kiểm tra xem body có chứa class 'sidebar-enable' không
+      if (body.classList.contains('sidebar-enable')) {
+        // Nếu có, loại bỏ class 'sidebar-enable' và 'vertical-collapsed'
+        body.classList.remove('sidebar-enable');
+        body.classList.remove('vertical-collpsed');
+      } else {
+        // Nếu không, thêm class 'sidebar-enable' và 'vertical-collapsed'
+        body.classList.add('sidebar-enable');
+        body.classList.add('vertical-collpsed');
+      }
+    },
+    toggoleSibar1() {
+        const body = document.body;
+      // Kiểm tra xem body có chứa class 'sidebar-enable' không
+      if (body.classList.contains('right-bar-enabled')) {
+        // Nếu có, loại bỏ class 'sidebar-enable' và 'vertical-collapsed'
+        body.classList.remove('right-bar-enabled');
+      } else {
+        // Nếu không, thêm class 'sidebar-enable' và 'vertical-collapsed'
+        body.classList.add('right-bar-enabled');
+      }
+    }
+  }
+};
+
+</script>
