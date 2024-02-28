@@ -1,17 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import invoiceIndex from '../components/invoices/index.vue';
-import NotFounds from '../components/NotFound.vue';
+import admin from './admin.js';
 
-const routes = [
-    {
-        path:'/',
-        component: invoiceIndex
-    },
-    {
-        path: '/:pathMatch(.*)*',
-        component: NotFounds
-    }
-];
+const routes = [...admin];
 
 const router = createRouter({
     history: createWebHistory(),
