@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/{pathMatch}',function() {
     return view('app');
 })->where('pathMatch',".*");
+
+Route::get('/events',SearchController::class)->name('events');

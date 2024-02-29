@@ -272,7 +272,7 @@
                         </div>
 
                         <div class="dropdown d-none d-lg-inline-block ms-1">
-                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen" @click="toggleFullscreen">
                                 <i class="ri-fullscreen-line"></i>
                             </button>
                         </div>
@@ -422,6 +422,32 @@ export default {
       } else {
         // Nếu không, thêm class 'sidebar-enable' và 'vertical-collapsed'
         body.classList.add('right-bar-enabled');
+      }
+    },
+    toggleFullscreen() {
+      const docEl = document.documentElement;
+      const fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+
+      if (!fullscreenElement) {
+        if (docEl.requestFullscreen) {
+          docEl.requestFullscreen();
+        } else if (docEl.mozRequestFullScreen) {
+          docEl.mozRequestFullScreen();
+        } else if (docEl.webkitRequestFullscreen) {
+          docEl.webkitRequestFullscreen();
+        } else if (docEl.msRequestFullscreen) {
+          docEl.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
       }
     }
   }

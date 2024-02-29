@@ -2,8 +2,8 @@ import './bootstrap';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia'
 import App from './App.vue';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
-import 'bootstrap/dist/css/bootstrap-utilities.min.css';
+// import 'bootstrap/dist/css/bootstrap-grid.min.css';
+// import 'bootstrap/dist/css/bootstrap-utilities.min.css';
 // import '../assets/libs/jquery/jquery.min.js';
 // import '../assets/libs/bootstrap/js/bootstrap.bundle.min.js';
 // import '../assets/libs/metismenu/metisMenu.min.js';
