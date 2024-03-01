@@ -18,8 +18,10 @@
         "@fullcalendar/interaction": "^6.1.11",
         "@fullcalendar/timegrid": "^6.1.11",
         "@fullcalendar/vue3": "^6.1.11",
+        "@inertiajs/vue3": "^1.0.15",
         "ant-design-vue": "^4.1.2",
         "bootstrap": "^5.3.3",
+        "moment": "^2.30.1",
         "pinia": "^2.1.7",
         "vue": "^3.4.19",
         "vue-router": "^4.3.0"
